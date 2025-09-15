@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Web Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    /* Quick inline styling for gallery */
+    .project-gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .gallery-main {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .gallery-thumbs {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .gallery-thumbs img {
+      width: 100px;
+      height: 70px;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: transform 0.2s, border 0.2s;
+    }
+
+    .gallery-thumbs img:hover {
+      transform: scale(1.1);
+      border: 2px solid #007bff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="hero">
+    <div class="hero-content">
+      <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Profile" class="profile-pic" />
+      <h1>Angelo Sandoval</h1>
+      <p><span class="highlight">Web Developer & Designer</span></p>
+      <a href="#contact" class="hero-btn">Contact Me <i class="fas fa-paper-plane"></i></a>
+    </div>
+  </header>
+
+  
+  <nav>
+    <ul>
+      <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+      <li><a href="#projects"><i class="fas fa-code"></i> Projects</a></li>
+      <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </nav>
+
+ 
+  <main>
+  
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi! I'm Angelo, a creative web developer who loves building beautiful and interactive websites. I specialize in <span class="highlight">HTML, CSS, JavaScript</span>, and modern web design trends. Let's make the web awesome together!</p>
+    </section>
+
+   
+    <section id="projects">
+      <h2>Projects</h2>
+      
+     
+      <article>
+        <h3><i class="fas fa-laptop-code"></i> Portfolio Website</h3>
+        <div class="project-gallery">
+         
+          <img src="mike/Screenshot 2025-09-08 182852.png" alt="Main Project Screenshot" class="gallery-main" id="mainImage">
+          
+          
+          <div class="gallery-thumbs">
+            <img src="Screenshot 2025-09-08 193238.png" alt="Thumb 1" onclick="changeImage(this)">
+            <img src="Screenshot 2025-09-08 183928.png" alt="Thumb 2" onclick="changeImage(this)">
+            <img src="Screenshot 2025-09-08 190552.png" alt="Thumb 3" onclick="changeImage(this)">
+        
+          </div>
+        </div>
+        <p>A sleek personal portfolio showcasing my skills and projects. Built with HTML, CSS, and JavaScript. Features responsive design and smooth animations.</p>
+      </article>
+
+    
+      <article>
+        <h3><i class="fas fa-mobile-alt"></i> Mobile App UI</h3>
+        <img src="Screenshot 2025-09-15 175941.png" alt="Project 2" class="project-img">
+        <p>Designed a modern mobile app interface using Figma and implemented with React Native. Focused on user experience and clean visuals.</p>
+      </article>
+    </section>
+    
+ 
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:angelosandoval318.email@example.com">angelosandoval318.email@example.com</a></p>
+      <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/angelosandoval318" target="_blank">angelosandoval318</a></p>
+      <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/angelosandoval318" target="_blank">angelosandoval318</a></p>
+    </section>
+  </main>
+
+
+  <footer>
+    <p>&copy; 2025 Angelo Sandoval. All rights reserved.</p>
+    <p class="footer-social">
+      <a href="https://linkedin.com/in/angelosandoval318" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/angelosandoval318" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:angelosandoval318.email@example.com"><i class="fas fa-envelope"></i></a>
+    </p>
+  </footer>
+
+<script>
+  
+  function changeImage(img) {
+    document.getElementById("mainImage").src = img.src;
+  }
+</script>
+
+</body>
+</html>
